@@ -6,17 +6,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_color"
-
         tools:context=".trans">
 
-    <!-- Toolbar-->
+    <!-- Toolbar -->
+
+    <!-- Lista de contactos (desplegable con scroll) -->
     <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/background_color"
-            app:layout_anchorGravity="bottom|center" app:layout_anchor="@+id/toolbar">
+            app:titleTextColor="@android:color/black" app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/toolbar">
 
+        <!-- Título e imagen -->
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -39,11 +42,96 @@
                     android:text="@string/appium_text"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
-
                     android:textSize="24sp"
                     android:gravity="center_vertical"/>
         </LinearLayout>
+
+        <!-- Botón de contactos -->
+        <ImageButton
+                android:id="@+id/contact_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_mas"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/contact_button_desc"
+                android:layout_gravity="end"
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"/>
+
     </com.google.android.material.appbar.MaterialToolbar>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contacts_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:visibility="gone"
+            tools:listitem="@layout/fragment_contact" />
 
+    <!-- Contenido principal -->
+    <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:layout_marginTop="150dp">
 
+        <!-- Título de la pantalla -->
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transferencia"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center" />
+
+        <!-- Campo para número de cuenta -->
+        <EditText
+                android:id="@+id/numero_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número de Cuenta"
+                android:inputType="number"
+                android:padding="12dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="16dp" />
+
+        <!-- Campo para monto -->
+        <EditText
+                android:id="@+id/importe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Importe"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="16dp" />
+
+        <!-- Saldo disponible -->
+        <TextView
+                android:id="@+id/saldo_disponible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo Disponible: $0.00"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/black" />
+
+        <!-- Botón continuar -->
+        <Button
+                android:id="@+id/btn_continuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continuar"
+                android:padding="12dp"
+                android:textColor="@android:color/white"
+                android:background="@color/black"
+                android:layout_marginTop="24dp" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
