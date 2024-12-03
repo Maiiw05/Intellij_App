@@ -7,7 +7,6 @@
         android:background="@color/background_color"
         tools:context=".inicio_sesion">
 
-
     <!-- AppBarLayout con Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -18,7 +17,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/background_color">
+                android:background="@color/black3">
 
             <LinearLayout
                     android:layout_width="wrap_content"
@@ -33,17 +32,17 @@
                         android:src="@drawable/mi_logo"
                         android:contentDescription="@string/app_name"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="8dp" />
 
                 <TextView
                         android:id="@+id/appium_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="APPIUM"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textStyle="bold"
                         android:textSize="24sp"
-                        android:gravity="center_vertical"/>
+                        android:gravity="center_vertical" />
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
@@ -53,21 +52,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" android:id="@+id/constraintLayout">
 
+        <!-- Título de Inicio de Sesión -->
         <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inicio de Sesion"
+                android:text="Inicio de Sesión"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"/>
+                app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!-- Icono del Usuario -->
         <ImageView
                 android:id="@+id/logo_icon"
                 android:layout_width="186dp"
@@ -78,46 +78,46 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="16dp"/>
 
+        <!-- Campo de Nombre de Usuario -->
+
+        <!-- Campo de Contraseña -->
+
+        <!-- Botón de Iniciar Sesión -->
         <EditText
-                android:id="@+id/email"
+                android:id="@+id/username"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Correo Electrónico"
-                android:inputType="textEmailAddress"
+                android:hint="Usuario"
+                android:inputType="text"
                 android:padding="12dp"
                 android:backgroundTint="@color/black"
                 app:layout_constraintTop_toBottomOf="@id/logo_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="24dp"/>
-
+                android:layout_marginTop="72dp" app:layout_constraintHorizontal_bias="0.0"/>
         <EditText
                 android:id="@+id/password"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Contraseña"
+                android:hint="@string/password_hint"
                 android:inputType="textPassword"
                 android:padding="12dp"
                 android:backgroundTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintTop_toBottomOf="@id/username"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"/>
-
+                android:layout_marginTop="36dp" app:layout_constraintHorizontal_bias="0.0"/>
         <Button
                 android:id="@+id/sign_in_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Iniciar Sesión"
+                android:text="@string/sign_in_button"
                 android:padding="12dp"
-                android:backgroundTint="@color/blue"
+                android:backgroundTint="@color/black2"
                 android:textColor="@android:color/white"
                 app:layout_constraintTop_toBottomOf="@id/password"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="24dp"/>
-
+                android:layout_marginTop="80dp" app:layout_constraintHorizontal_bias="1.0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-

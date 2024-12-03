@@ -3,27 +3,41 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/FirstFragment">
+            app:startDestination="@id/inicio_sesion">
 
+    <!-- Pantalla de inicio de sesión -->
+    <activity
+            android:id="@+id/inicio_sesion"
+            android:name="com.example.appiumint.inicio_sesion"
+            android:label="Inicio de Sesión"
+            tools:layout="@layout/inicio_sesion">
+
+    </activity>
+
+    <!-- Pantalla de Mi Cuenta -->
+    <activity
+            android:id="@+id/mi_cuenta"
+            android:name="com.example.appiumint.Mi_cuenta"
+            android:label="Mi Cuenta"
+            tools:layout="@layout/activity_mi_cuenta">
+
+    </activity>
+
+    <!-- Fragmento de Transacciones -->
     <fragment
-            android:id="@+id/FirstFragment"
-            android:name="com.example.appiumint.FirstFragment"
-            android:label="@string/first_fragment_label"
-            tools:layout="@layout/fragment_first">
-
+            android:id="@+id/trans"
+            android:name="com.example.appiumint.trans"
+            android:label="Transacciones"
+            tools:layout="@layout/fragment_trans">
         <action
-                android:id="@+id/action_FirstFragment_to_SecondFragment"
-                app:destination="@id/SecondFragment"/>
+                android:id="@+id/action_trans_to_contactos"
+                app:destination="@id/contactos" />
     </fragment>
+
+    <!-- Fragmento de Contactos -->
     <fragment
-            android:id="@+id/SecondFragment"
-            android:name="com.example.appiumint.SecondFragment"
-            android:label="@string/second_fragment_label"
-            tools:layout="@layout/fragment_second">
-
-        <action
-                android:id="@+id/action_SecondFragment_to_FirstFragment"
-                app:destination="@id/FirstFragment"/>
-
-    </fragment>
+            android:id="@+id/contactos"
+            android:name="com.example.appiumint.contactos"
+            android:label="Contactos"
+            tools:layout="@layout/fragment_contact" />
 </navigation>

@@ -27,7 +27,6 @@ class MovementsAdapter(private val movements: List<Movement>) :
         val movement = movements[position]
         holder.fecha.text = movement.fecha_transaccion
         holder.monto.text = "$${movement.monto}"
-        holder.tipo.text = movement.nombre
     }
 
     override fun getItemCount() = movements.size

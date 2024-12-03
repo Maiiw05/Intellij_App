@@ -4,5 +4,9 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
+        <!-- Fondo de la ventana -->
+        <item name="android:windowBackground">@color/white</item> <!-- Cambia a tu color preferido -->
+
     </style>
 </resources>
