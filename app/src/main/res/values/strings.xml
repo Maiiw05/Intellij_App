@@ -24,11 +24,29 @@
 
     <string name="ultima_notificaciones">Últimas Notificaciones</string>
     <string name="saldo_disponible">Saldo Disponible</string>
-    <string name="saldo_numerico">$</string>
     <string name="fecha_expiracion">00/00</string>
-    <string name="numero_tarjeta_oculto">**** **** **** ****</string>
+    <string name="numero_tarjeta_oculto">**** ****</string>
     <string name="appium_text">APPIUM</string>
     <string name="historial">Últimas Notificaciones</string>
+
+    <string name="appium">APPIUM</string>
+    <string name="retirotit">Retiro</string>
+    <string name="pesos">$</string>
+    <string name="cuanto_deseas_retirar">¿Cuánto deseas retirar?</string>
+    <string name="monto_100">$100</string>
+    <string name="monto_300">$300</string>
+    <string name="monto_500">$500</string>
+    <string name="monto_1000">$1,000</string>
+    <string name="monto_2000">$2,000</string>
+    <string name="monto_5000">$5,000</string>
+    <string name="otra_cantidad">Otra Cantidad</string>
+    <string name="transferir">Transferir</string>
+    <string name="Saldo_disponible">Saldo disponible</string>
+    <string name="contact_button_desc">contact_button_desc</string>
+    <string name="selecciona_contacto">Selecciona un Contacto</string>
+    <string name="continuar">Continuar</string>
+    <string name="numero_cuenta_hint">Número de Cuenta</string>
+    <string name="importe_hint">Importe</string>
 
 
     <string name="lorem_ipsum">
