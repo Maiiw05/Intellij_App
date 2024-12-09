@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.100.19:8012/"
+    private const val BASE_URL = "http://192.168.193.177:8012/"
 
     val instance: ApiService by lazy {
         Log.d("Retrofit", "Base URL: $BASE_URL")

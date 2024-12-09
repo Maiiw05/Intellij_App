@@ -18,7 +18,7 @@ import retrofit2.Response
 import android.content.Context
 
 
-class Transaccion : Fragment() {
+class trans  : Fragment() {
 
     private lateinit var binding: FragmentTransBinding
 

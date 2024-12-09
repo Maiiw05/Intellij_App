@@ -3,7 +3,7 @@
     <!-- Permitir tráfico HTTP a todos los dominios -->
     <domain-config cleartextTrafficPermitted="true">
         <!-- Define el dominio principal sin protocolo ni puerto -->
-        <domain includeSubdomains="true">192.168.100.19:8012</domain>
+        <domain includeSubdomains="true">192.168.193.177:8012</domain>
     </domain-config>
 
     <!-- Permitir tráfico HTTP para todas las conexiones globalmente -->

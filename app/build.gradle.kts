@@ -59,6 +59,8 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.3.0")
     implementation ("androidx.core:core-ktx:1.10.1")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+
 
 
 }
